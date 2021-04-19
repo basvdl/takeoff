@@ -28,7 +28,7 @@ SCHEMA = TAKEOFF_BASE_SCHEMA.extend(
                     vol.Optional(
                         "use_original_python_filename",
                         description=(
-                            "If you upload multiple unique Python files use this flag to include the original."
+                            "If you upload multiple unique Python files use this flag to include the original"
                             "filename in the result. Only impacts Python files."
                         ),
                         default=False,
@@ -122,7 +122,7 @@ class DeployToDatabricks(Step):
                 self.application_name,
                 self.env.artifact_tag,
                 job_config["main_name"],
-                job_config["use_original_python_filename"]
+                job_config["use_original_python_filename"],
             )
             run_config = DeployToDatabricks._construct_job_config(
                 **common_arguments,
